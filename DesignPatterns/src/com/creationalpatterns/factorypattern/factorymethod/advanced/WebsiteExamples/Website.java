@@ -1,4 +1,4 @@
-package com.creationalpatterns.factorypattern.factorymethod.advanced.WebsiteExamples.copy;
+package com.creationalpatterns.factorypattern.factorymethod.advanced.WebsiteExamples;
 
 import java.util.Date;
 
