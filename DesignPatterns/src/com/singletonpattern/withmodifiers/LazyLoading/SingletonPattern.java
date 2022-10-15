@@ -27,6 +27,6 @@ public class SingletonPattern
 	
 	public void whatIsTheIntentOfSingleton() 
 	{
-		System.err.println("Ensure a class only has one instance , and provide a global point of access to it. GoF");
+		System.err.println("Ensure a class only has one instance , and provide a global point of access to it.GoF");
 	}
 }
