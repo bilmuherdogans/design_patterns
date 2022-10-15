@@ -1,4 +1,4 @@
-package com.singletonpattern.withmodifiers.LazyLoading;
+package com.creationalpatterns.singletonpattern.withmodifiers.LazyLoading;
 
 public class SingletonPatternTest {
 	

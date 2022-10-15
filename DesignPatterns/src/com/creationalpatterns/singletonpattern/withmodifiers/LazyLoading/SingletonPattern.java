@@ -1,4 +1,4 @@
-package com.singletonpattern.withmodifiers.LazyLoading.forMultithread;
+package com.creationalpatterns.singletonpattern.withmodifiers.LazyLoading;
 /**
  * 
  * @author bilmuherdogans
@@ -10,44 +10,23 @@ package com.singletonpattern.withmodifiers.LazyLoading.forMultithread;
 public class SingletonPattern 
 {
 	
-	private static volatile  SingletonPattern singletonPattern;
+	private static  SingletonPattern singletonPattern;
 	
 	private SingletonPattern() 
-	{ 
+	{
 	}
 	public static  SingletonPattern getSingletonObject() 
 	{	
 		
-		synchronized (SingletonPattern.class)
-		{
 			if(singletonPattern==null)
 			{
 				singletonPattern=new SingletonPattern();
 			}
-			
-		}
-		return singletonPattern;
-	}
-	
-	
-	public static  SingletonPattern getSingletonObjectByDoingDoubleNullCheck() 
-	{	
-		if(singletonPattern==null)
-		{
-			synchronized (SingletonPattern.class)
-			{
-				if(singletonPattern==null)
-				{
-					singletonPattern=new SingletonPattern();
-				}
-				
-			}
-		}
-		return singletonPattern;
+			return singletonPattern;
 	}
 	
 	public void whatIsTheIntentOfSingleton() 
 	{
-		System.err.println("Ensure a class only has one instance , and provide a global point of access to it. GoF");
+		System.err.println("Ensure a class only has one instance , and provide a global point of access to it.GoF");
 	}
 }

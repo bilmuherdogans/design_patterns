@@ -1,4 +1,4 @@
-package com.singletonpattern.withmodifiers.LazyLoading;
+package com.creationalpatterns.singletonpattern.withmodifiers;
 /**
  * 
  * @author bilmuherdogans
@@ -10,23 +10,19 @@ package com.singletonpattern.withmodifiers.LazyLoading;
 public class SingletonPattern 
 {
 	
-	private static  SingletonPattern singletonPattern;
+	private static SingletonPattern singletonPattern=new SingletonPattern();
 	
 	private SingletonPattern() 
 	{
+	
 	}
-	public static  SingletonPattern getSingletonObject() 
-	{	
-		
-			if(singletonPattern==null)
-			{
-				singletonPattern=new SingletonPattern();
-			}
-			return singletonPattern;
+	
+	public static SingletonPattern getSingletonObject() {
+		return singletonPattern;
 	}
 	
 	public void whatIsTheIntentOfSingleton() 
 	{
-		System.err.println("Ensure a class only has one instance , and provide a global point of access to it.GoF");
+		System.err.println("Ensure a class only has one instance , and provide a global point of access to it. GoF");
 	}
 }

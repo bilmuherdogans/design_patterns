@@ -1,4 +1,4 @@
-package com.singletonpattern.withmodifiers.reflection;
+package com.creationalpatterns.singletonpattern.withmodifiers.LazyLoading.forMultithread;
 /**
  * 
  * @author bilmuherdogans
@@ -10,14 +10,39 @@ package com.singletonpattern.withmodifiers.reflection;
 public class SingletonPattern 
 {
 	
-	private static SingletonPattern singletonPattern=new SingletonPattern();
+	private static volatile  SingletonPattern singletonPattern;
 	
 	private SingletonPattern() 
-	{
-	
+	{ 
+	}
+	public static  SingletonPattern getSingletonObject() 
+	{	
+		
+		synchronized (SingletonPattern.class)
+		{
+			if(singletonPattern==null)
+			{
+				singletonPattern=new SingletonPattern();
+			}
+			
+		}
+		return singletonPattern;
 	}
 	
-	public static SingletonPattern getSingletonObject() {
+	
+	public static  SingletonPattern getSingletonObjectByDoingDoubleNullCheck() 
+	{	
+		if(singletonPattern==null)
+		{
+			synchronized (SingletonPattern.class)
+			{
+				if(singletonPattern==null)
+				{
+					singletonPattern=new SingletonPattern();
+				}
+				
+			}
+		}
 		return singletonPattern;
 	}
 	

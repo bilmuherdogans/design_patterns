@@ -1,4 +1,4 @@
-package com.singletonpattern.withmodifiers;
+package com.creationalpatterns.singletonpattern.withmodifiers.reflection;
 /**
  * 
  * @author bilmuherdogans
