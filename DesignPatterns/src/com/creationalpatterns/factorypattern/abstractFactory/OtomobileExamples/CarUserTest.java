@@ -14,9 +14,9 @@ public class CarUserTest
 		
 		System.err.println("\n****** Sub level\n");
 		
-		CarFactoryImpl carFactoryImpl=new CarFactoryImpl();
-		PassengersCar tofas=carFactoryImpl.createPassengerCarFactory("11111","Tofas");
-		CommercialCar iveco=carFactoryImpl.createCommercialCarFactory("22222", "Iveco", "12500");
+		CarFactory carFactoryImpl=new CarFactoryImpl();
+		PassengersCar tofas=(PassengersCar) carFactoryImpl.createPassengerCarFactory("11111","Tofas");
+		CommercialCar iveco=(CommercialCar) carFactoryImpl.createCommercialCarFactory("22222", "Iveco", "12500");
 		
 		System.err.println(tofas.toString());
 		System.err.println(iveco.toString());
