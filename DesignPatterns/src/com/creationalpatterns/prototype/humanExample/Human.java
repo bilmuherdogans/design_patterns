@@ -12,10 +12,30 @@ public class Human 	implements Cloneable {
 	private boolean isLife;
 	private boolean isMarried;
 	
+	
 	public Human(String nationality) {
 		super();
 		this.nationality = nationality;
 	}
+	
+	
+	@Override
+	protected Human clone() 
+	{
+		Human person=null;
+		try 
+		{
+			person=(Human)super.clone();	
+		} 
+		catch (CloneNotSupportedException e)
+		{
+			 System.err.println(e.getMessage());
+		}
+		
+		return person;
+	}
+	
+	
 	public int getAge() {
 		return age;
 	}
@@ -70,19 +90,5 @@ public class Human 	implements Cloneable {
 	public void setMarried(boolean isMarried) {
 		this.isMarried = isMarried;
 	}
-	@Override
-	protected Human clone() 
-	{
-		Human person=null;
-		try 
-		{
-			person=(Human)super.clone();	
-		} 
-		catch (CloneNotSupportedException e)
-		{
-			 System.err.println(e.getMessage());
-		}
-		
-		return person;
-	}
+	
 }
