@@ -1,6 +1,6 @@
 package com.creationalpatterns.prototype.humanExample;
 
-public class Human 	implements Cloneable {
+public class Human implements Cloneable {
 	
 	private int age;
 	private String gender;
