@@ -1,4 +1,4 @@
-package com.creationalpatterns.prototype.humanExample.PoliceSytem;
+package com.creationalpatterns.prototype.PoliceSytem;
 
 public class Human implements Cloneable {
 	
