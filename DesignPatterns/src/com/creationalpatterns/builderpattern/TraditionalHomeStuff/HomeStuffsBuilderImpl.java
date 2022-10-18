@@ -26,7 +26,7 @@ public class HomeStuffsBuilderImpl  implements HomeStuffsBuilder{
 	}
 
 	@Override
-	public HomeStuffs buildHomeStuffPacket() 
+	public HomeStuffs buildHomeStuffFullPacket() 
 	{
 		homeStuffs=new HomeStuffs();
 		buildCarpet("bellona","red");
@@ -34,6 +34,24 @@ public class HomeStuffsBuilderImpl  implements HomeStuffsBuilder{
 		buildTV("LG","Black");
 		
 		return homeStuffs;
+	}
+
+	@Override
+	public HomeStuffs buildHomeStuffBasicPacket() {
+
+		homeStuffs=new HomeStuffs();
+		buildCarpet("bellona","red");
+		return homeStuffs;
+	 
+	}
+
+	@Override
+	public HomeStuffs buildHomeStuffMiddlePacket() {
+		// TODO Auto-generated method stub
+		
+		buildFreezer("beko","white");
+		buildTV("LG","Black");
+		return null;
 	}
  
 }
